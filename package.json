@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "lint:html": "htmlhint **/*.html",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "htmlhint": "^0.14.0",
+    "eslint": "^7.32.0"
+  }
+}

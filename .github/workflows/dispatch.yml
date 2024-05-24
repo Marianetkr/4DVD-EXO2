@@ -19,7 +19,6 @@ on:
             - sith
             - rebel
 jobs:
-  name: player_info
   log-the-inputs:
     runs-on: ubuntu-latest
     steps:

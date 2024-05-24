@@ -1,0 +1,27 @@
+name: worfklow_dispatch1
+on:
+  workflow_dispatch:
+    inputs:
+        username:
+          description: "string type input username"
+          type: string
+          required: true
+        level:
+          description: "string type input level"
+          type: string
+          required: true
+        class:
+          description: "choice type input class"
+          default: "jedi"
+          type: choice
+          options:
+            - jedi
+            - sith
+            - rebel
+jobs:
+  name: player_info
+  log-the-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Le joueur ${{ inputs.username }} est de niveau ${{ inputs.level }} et joue un ${{ inputs.class }}"
